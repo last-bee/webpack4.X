@@ -1,0 +1,12 @@
+p{
+    font-size:20px;
+    color: #c136a9;
+}
+#beaty{
+    width:200px;
+    height: 200px;
+    background: url('../images/1.jpg') no-repeat center center;
+    transform: translate(50%,50%);
+    margin-top:20px ;
+    border-radius:50%
+}
