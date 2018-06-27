@@ -1,10 +1,15 @@
-require ('../css/demo.css')
 require ('../css/index.less')
-console.log(process.env.NODE_ENV)
+import axios from 'axios'
 import Vue from 'vue'
+import demo from '@/compontents/demo'
+console.log(demo)
 var app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!'
+    },
+    components:{demo},
+    mounted:function(){
+        
     }
 })

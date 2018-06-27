@@ -2,6 +2,7 @@
 const path = require('path')
 const htmlPlugin = require('html-webpack-plugin')
 const glob = require('glob')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 let entryHtmlPlugin = []
 let entryJs = {}
 function resolve (dir) {
@@ -23,12 +24,26 @@ glob.sync(path.resolve(__dirname,'../src/entry','**/*.js')).forEach((item) => {
         filename:`${name}.html`
     }))
 })
+entryHtmlPlugin.push(new VueLoaderPlugin())
 let moduleLoader = {
     rules:[
+        {
+            test: /\.vue$/,
+            loader: "vue-loader",
+            options:{
+                transformToRequire: {
+                    video: 'src',
+                    source: 'src',
+                    img: 'src',
+                    image: 'xlink:href'
+                }
+            }
+        }, 
         {    
             test: /\.js$/,    
             include: ['src/'],  
-            loader: 'babel-loader'    
+            loader: 'babel-loader',
+            include:[resolve('src')]    
         },
         {
             test:/\.css$/,
