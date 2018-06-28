@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        data(){
+        data:function(){
             return{
                 message:'hello world  @lastbee163.com'
             }

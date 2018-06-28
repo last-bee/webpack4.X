@@ -1,14 +1,13 @@
 require ('../css/index.less')
-import axios from 'axios'
+// import axios from 'axios'
 import Vue from 'vue'
-import demo from '@/compontents/demo'
-console.log(demo)
+import demoTodo from '@/compontents/demo'
 var app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!'
     },
-    components:{demo},
+    components:{demoTodo},
     mounted:function(){
         
     }
