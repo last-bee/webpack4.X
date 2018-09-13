@@ -1,5 +1,5 @@
 <template>
-    <div id='demo'>
+    <div id='demo' @click='toHref'>
         {{message}}
     </div>
 </template>
@@ -9,6 +9,12 @@
         data:function(){
             return{
                 message:'hello world  @lastbee163.com'
+            }
+        },
+        methods:{
+            toHref:function(){
+                console.log('--->>>>>>')
+                window.location.href = './demo1.html'
             }
         }
     }
