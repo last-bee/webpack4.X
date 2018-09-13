@@ -23,7 +23,7 @@
 #demo{
     background: red;
     color:#fff;
-    transform: translate(100px,200px) rotate(45deg);
+    // transform: translate(100px,200px) rotate(45deg);
     transform-origin:0% 0%;
     height: 40px;
     line-height: 40px;
